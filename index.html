@@ -201,6 +201,15 @@ a:hover{text-decoration:underline}
 }
 .stat-num span{color:var(--teal);font-size:1.4rem}
 .stat-label{color:rgba(255,255,255,.66);font-size:.83rem;margin-top:.35rem;line-height:1.4}
+.stat-full{grid-column:1 / -1;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.14)}
+.stat-book-links{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin-top:.55rem}
+.stat-book-links a{
+  display:inline-flex;align-items:center;gap:.35rem;
+  color:var(--sky);font-size:.8rem;font-weight:600;text-decoration:none !important;
+  border-bottom:1px solid rgba(143,193,227,.35);padding-bottom:1px;transition:border-color .2s ease, color .2s ease;
+}
+.stat-book-links a:hover{color:#fff;border-color:#fff}
+.stat-book-links svg{width:12px;height:12px;flex-shrink:0}
 .hero-scroll{
   position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:2;
   color:rgba(255,255,255,.5);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
@@ -526,6 +535,22 @@ a:hover{text-decoration:underline}
         <div><div class="stat-num">600<span>+</span></div><div class="stat-label">Citas en publicaciones científicas</div></div>
         <div><div class="stat-num">100<span>k+</span></div><div class="stat-label">Trabajadores medidos con Factor Wellbeing (2021–2026)</div></div>
         <div><div class="stat-num">6</div><div class="stat-label">Países como ponente en congresos ISQOLS</div></div>
+        <div class="stat-full">
+          <div class="stat-num">2</div>
+          <div class="stat-label">
+            Autor de libros
+            <span class="stat-book-links">
+              <a href="https://www.amazon.com.mx/Factor-Wellbeing-bienestar-ventaja-competitiva-ebook/dp/B0BWGLD59M/ref=sr_1_2?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-2" target="_blank" rel="noopener">
+                Factor Wellbeing
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+              <a href="https://www.amazon.com.mx/Ambientes-positivos-confianza-organizaci%C3%B3n-incluyente-ebook/dp/B0FRVH58WG/ref=sr_1_1?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" target="_blank" rel="noopener">
+                Ambientes Positivos
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </span>
+          </div>
+        </div>
       </div>
       </div>
     </aside>
