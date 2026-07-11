@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Humberto Charles-Leija, PhD — Investigador y Consultor en Bienestar Organizacional</title>
+<meta name="description" content="Humberto Charles-Leija, PhD. Investigador y consultor en bienestar organizacional, trabajo significativo y emprendimiento. Consultoría a empresas basada en evidencia científica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#081C30;
+  --navy-800:#0C2745;
+  --navy-700:#123457;
+  --navy-600:#1C4470;
+  --ink:#22303C;
+  --slate:#51606E;
+  --mist:#8FA3B3;
+  --line:#DCE4EA;
+  --paper:#F6F8FA;
+  --white:#FFFFFF;
+  --teal:#2E9E83;
+  --teal-dark:#217A65;
+  --teal-soft:#E3F3EE;
+  --sky:#8FC1E3;
+  --sky-soft:#EAF3FA;
+  --serif:"Fraunces", Georgia, serif;
+  --sans:"Figtree", "Segoe UI", sans-serif;
+  --radius:14px;
+  --shadow-sm:0 1px 3px rgba(8,28,48,.08);
+  --shadow-md:0 10px 30px -12px rgba(8,28,48,.22);
+  --shadow-lg:0 24px 60px -20px rgba(8,28,48,.35);
+  --nav-h:68px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px)}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.65;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.18;color:var(--navy-800)}
+img{max-width:100%}
+a{color:var(--teal-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{width:min(1120px, 92%);margin-inline:auto}
+
+/* ====== Utility ====== */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--teal-dark);margin-bottom:1rem;
+}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--teal);display:inline-block}
+.section{padding:5.5rem 0}
+.section-title{font-size:clamp(1.9rem, 4vw, 2.7rem);margin-bottom:1rem}
+.section-lead{max-width:62ch;color:var(--slate);font-size:1.06rem;margin-bottom:2.8rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:var(--sans);font-weight:600;font-size:.95rem;
+  padding:.85rem 1.7rem;border-radius:999px;border:1.5px solid transparent;
+  cursor:pointer;transition:all .25s ease;text-decoration:none !important;
+}
+.btn svg{width:17px;height:17px;flex-shrink:0}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(46,158,131,.55)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--navy-800);border-color:var(--navy-800)}
+.btn-outline:hover{background:var(--navy-800);color:#fff;transform:translateY(-2px)}
+
+/* ====== Reveal on scroll ====== */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* ====== Nav ====== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);
+  display:flex;align-items:center;
+  background:rgba(8,28,48,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  transition:background .3s ease;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;width:min(1120px,92%);margin-inline:auto}
+.nav-brand{font-family:var(--serif);font-size:1.12rem;font-weight:600;color:#fff;text-decoration:none !important;letter-spacing:.01em}
+.nav-brand span{color:var(--sky)}
+.nav-links{display:flex;align-items:center;gap:1.9rem;list-style:none}
+.nav-links a{
+  color:rgba(255,255,255,.78);font-size:.92rem;font-weight:500;
+  text-decoration:none !important;padding:.35rem 0;position:relative;
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:var(--teal);transition:width .25s ease;
+}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a.active::after,.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--teal);color:#fff !important;padding:.5rem 1.15rem;border-radius:999px;font-weight:600}
+.nav-cta::after{display:none}
+.nav-cta:hover{background:var(--teal-dark)}
+.nav-toggle{
+  display:none;background:none;border:none;cursor:pointer;padding:.4rem;
+  flex-direction:column;gap:5px;
+}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;transition:all .3s ease}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ====== Hero ====== */
+.hero{
+  position:relative;min-height:100svh;
+  display:flex;align-items:center;
+  background:
+    radial-gradient(ellipse 900px 520px at 85% -10%, rgba(46,158,131,.20), transparent 60%),
+    radial-gradient(ellipse 700px 500px at -10% 110%, rgba(143,193,227,.14), transparent 60%),
+    linear-gradient(165deg, var(--navy-900) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+  color:#fff;overflow:hidden;
+  padding:calc(var(--nav-h) + 3rem) 0 4rem;
+}
+.hero::before{ /* grain */
+  content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+.hero::after{ /* fine grid */
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(ellipse 80% 70% at 60% 40%, #000 30%, transparent 75%);
+}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:3.5rem;align-items:center}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--sky);margin-bottom:1.4rem;
+}
+.hero-kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(46,158,131,.25)}
+.hero h1{
+  font-size:clamp(2.5rem, 6vw, 4.1rem);color:#fff;font-weight:600;
+  margin-bottom:.7rem;letter-spacing:-.01em;
+}
+.hero h1 em{font-style:italic;color:var(--sky);font-weight:500}
+.hero-role{
+  font-family:var(--serif);font-size:clamp(1.15rem, 2.4vw, 1.5rem);
+  color:var(--teal);font-style:italic;margin-bottom:1.5rem;
+}
+.hero-desc{color:rgba(255,255,255,.82);max-width:56ch;font-size:1.05rem;font-weight:300;margin-bottom:2.2rem}
+.hero-desc strong{color:#fff;font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:2.4rem}
+.hero-social{display:flex;flex-wrap:wrap;gap:1.6rem;align-items:center}
+.hero-social a{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:rgba(255,255,255,.75);font-size:.92rem;font-weight:500;text-decoration:none !important;
+  transition:color .2s ease;
+}
+.hero-social a:hover{color:var(--sky)}
+.hero-social svg{width:18px;height:18px}
+
+/* Hero photo + stats */
+.hero-side{display:flex;flex-direction:column;gap:1.5rem}
+.hero-photo{position:relative;z-index:0;margin-right:14px}
+.hero-photo img{
+  width:100%;aspect-ratio:1/0.95;object-fit:cover;object-position:76% 22%;
+  border-radius:20px;display:block;
+  border:1px solid rgba(255,255,255,.2);box-shadow:var(--shadow-lg);
+}
+.hero-photo::after{
+  content:"";position:absolute;top:16px;left:16px;right:-14px;bottom:-14px;
+  border:2px solid rgba(46,158,131,.55);border-radius:22px;z-index:-1;
+}
+.hero-photo figcaption{
+  position:absolute;left:14px;bottom:14px;
+  background:rgba(8,28,48,.78);backdrop-filter:blur(6px);
+  color:rgba(255,255,255,.85);font-size:.76rem;font-weight:500;
+  padding:.4rem .85rem;border-radius:999px;border:1px solid rgba(255,255,255,.15);
+}
+.hero-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:20px;padding:1.6rem 1.6rem;
+  backdrop-filter:blur(8px);
+  box-shadow:var(--shadow-lg);
+}
+.hero-card h3{
+  color:rgba(255,255,255,.65);font-family:var(--sans);font-weight:600;
+  font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.5rem;
+}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 1.2rem}
+.stat-num{
+  font-family:var(--serif);font-size:2.1rem;font-weight:600;color:#fff;line-height:1;
+}
+.stat-num span{color:var(--teal);font-size:1.4rem}
+.stat-label{color:rgba(255,255,255,.66);font-size:.83rem;margin-top:.35rem;line-height:1.4}
+.hero-scroll{
+  position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:2;
+  color:rgba(255,255,255,.5);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:.5rem;text-decoration:none !important;
+}
+.hero-scroll::after{
+  content:"";width:1px;height:34px;background:linear-gradient(rgba(255,255,255,.6), transparent);
+  animation:drip 2s ease infinite;
+}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* staggered load */
+.hero .fade-up{opacity:0;transform:translateY(24px);animation:fadeUp .9s cubic-bezier(.22,.7,.3,1) forwards}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+.hero .d1{animation-delay:.1s}.hero .d2{animation-delay:.22s}.hero .d3{animation-delay:.34s}
+.hero .d4{animation-delay:.46s}.hero .d5{animation-delay:.58s}.hero .d6{animation-delay:.75s}
+
+/* ====== Curriculum ====== */
+#curriculum{background:var(--paper)}
+.cv-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:start}
+.cv-text p{color:var(--slate);margin-bottom:1.1rem}
+.cv-text p strong{color:var(--navy-800)}
+.cv-highlight{
+  border-left:3px solid var(--teal);background:var(--teal-soft);
+  padding:1.1rem 1.4rem;border-radius:0 var(--radius) var(--radius) 0;
+  font-family:var(--serif);font-style:italic;font-size:1.06rem;color:var(--navy-700);
+  margin:1.6rem 0;
+}
+.timeline{position:relative;padding-left:1.6rem}
+.timeline::before{
+  content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(var(--teal), var(--sky));border-radius:2px;
+}
+.tl-item{position:relative;padding-bottom:1.7rem}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-1.6rem;top:7px;width:12px;height:12px;border-radius:50%;
+  background:var(--white);border:3px solid var(--teal);
+}
+.tl-date{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-dark)}
+.tl-role{font-family:var(--serif);font-size:1.08rem;font-weight:600;color:var(--navy-800);margin:.15rem 0 .1rem}
+.tl-org{color:var(--slate);font-size:.93rem}
+.cv-block{margin-top:2.6rem}
+.cv-block h3{font-size:1.25rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem}
+.cv-block h3 svg{width:20px;height:20px;color:var(--teal)}
+.edu-item{display:flex;gap:1rem;padding:.9rem 0;border-bottom:1px dashed var(--line)}
+.edu-item:last-child{border-bottom:none}
+.edu-year{font-family:var(--serif);font-weight:600;color:var(--teal-dark);white-space:nowrap;font-size:.95rem;min-width:86px}
+.edu-body strong{display:block;color:var(--navy-800);font-size:.98rem}
+.edu-body span{color:var(--slate);font-size:.9rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.badge{
+  background:var(--white);border:1px solid var(--line);border-radius:999px;
+  padding:.42rem 1rem;font-size:.84rem;font-weight:500;color:var(--navy-700);
+  box-shadow:var(--shadow-sm);
+}
+.badge b{color:var(--teal-dark)}
+
+/* ====== Research ====== */
+.research-lines{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:3.5rem}
+.line-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.8rem 1.6rem;box-shadow:var(--shadow-sm);
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  position:relative;overflow:hidden;
+}
+.line-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg, var(--teal), var(--sky));
+  transform:scaleX(0);transform-origin:left;transition:transform .35s ease;
+}
+.line-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:transparent}
+.line-card:hover::before{transform:scaleX(1)}
+.line-icon{
+  width:46px;height:46px;border-radius:12px;background:var(--teal-soft);
+  display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;
+}
+.line-icon svg{width:23px;height:23px;color:var(--teal-dark)}
+.line-card h3{font-size:1.18rem;margin-bottom:.5rem}
+.line-card p{color:var(--slate);font-size:.93rem}
+.pub-cols{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:start}
+.pub-list h3, .pub-side h3{font-size:1.3rem;margin-bottom:1.4rem}
+.pub-item{
+  padding:1.05rem 1.2rem;border-radius:12px;border:1px solid transparent;
+  transition:background .25s ease, border-color .25s ease;margin-bottom:.35rem;
+}
+.pub-item:hover{background:var(--paper);border-color:var(--line)}
+.pub-title{font-family:var(--serif);font-weight:600;color:var(--navy-800);font-size:1rem;line-height:1.4}
+.pub-meta{font-size:.85rem;color:var(--slate);margin-top:.25rem}
+.pub-meta em{color:var(--teal-dark);font-style:normal;font-weight:600}
+.book-card{
+  display:flex;gap:1.1rem;background:linear-gradient(135deg, var(--navy-800), var(--navy-600));
+  color:#fff;border-radius:var(--radius);padding:1.4rem;margin-bottom:1rem;
+  box-shadow:var(--shadow-md);
+}
+.book-spine{
+  width:6px;border-radius:3px;flex-shrink:0;
+  background:linear-gradient(var(--teal), var(--sky));
+}
+.book-card h4{color:#fff;font-size:1.05rem;margin-bottom:.3rem}
+.book-card p{color:rgba(255,255,255,.75);font-size:.86rem}
+.pub-side .note{
+  background:var(--sky-soft);border:1px solid #D5E7F4;border-radius:var(--radius);
+  padding:1.2rem 1.4rem;font-size:.92rem;color:var(--navy-700);margin-top:1.4rem;
+}
+.scholar-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.6rem;font-weight:600}
+.scholar-link svg{width:18px;height:18px}
+
+/* ====== Consulting ====== */
+#consultoria{
+  background:
+    radial-gradient(ellipse 800px 400px at 110% 0%, rgba(46,158,131,.16), transparent 60%),
+    radial-gradient(ellipse 600px 400px at -10% 100%, rgba(143,193,227,.10), transparent 60%),
+    linear-gradient(160deg, var(--navy-900), var(--navy-800));
+  color:#fff;position:relative;overflow:hidden;
+}
+#consultoria .eyebrow{color:var(--sky)}
+#consultoria .eyebrow::before{background:var(--sky)}
+#consultoria .section-title{color:#fff}
+#consultoria .section-lead{color:rgba(255,255,255,.78)}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem;margin-bottom:3rem}
+.service{
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius);padding:1.7rem 1.6rem;
+  transition:background .3s ease, transform .3s ease, border-color .3s ease;
+}
+.service:hover{background:rgba(255,255,255,.1);transform:translateY(-4px);border-color:rgba(143,193,227,.4)}
+.service-num{
+  font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--teal);
+  display:block;margin-bottom:.7rem;
+}
+.service h3{color:#fff;font-size:1.16rem;margin-bottom:.55rem}
+.service p{color:rgba(255,255,255,.72);font-size:.92rem}
+.consult-banner{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;
+  background:rgba(46,158,131,.13);border:1px solid rgba(46,158,131,.4);
+  border-radius:var(--radius);padding:1.8rem 2rem;
+}
+.consult-banner p{
+  font-family:var(--serif);font-size:1.2rem;color:#fff;max-width:46ch;font-style:italic;
+}
+
+/* ====== Contact ====== */
+#contacto{background:var(--paper)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:start}
+.contact-info h3{font-size:1.3rem;margin-bottom:1rem}
+.contact-info > p{color:var(--slate);margin-bottom:2rem;max-width:44ch}
+.contact-item{
+  display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;margin-bottom:.8rem;
+  background:var(--white);border:1px solid var(--line);border-radius:12px;
+  transition:transform .25s ease, box-shadow .25s ease;text-decoration:none !important;
+}
+.contact-item:hover{transform:translateX(5px);box-shadow:var(--shadow-md)}
+.ci-icon{
+  width:42px;height:42px;border-radius:10px;background:var(--teal-soft);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.ci-icon svg{width:20px;height:20px;color:var(--teal-dark)}
+.ci-body strong{display:block;color:var(--navy-800);font-size:.95rem}
+.ci-body span{color:var(--slate);font-size:.85rem}
+.contact-form{
+  background:var(--white);border:1px solid var(--line);border-radius:18px;
+  padding:2.3rem;box-shadow:var(--shadow-md);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.field{margin-bottom:1.15rem}
+.field label{display:block;font-size:.86rem;font-weight:600;color:var(--navy-800);margin-bottom:.4rem}
+.field input,.field textarea{
+  width:100%;font-family:var(--sans);font-size:.96rem;color:var(--ink);
+  padding:.8rem 1rem;border:1.5px solid var(--line);border-radius:10px;
+  background:var(--paper);transition:border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.field input:focus,.field textarea:focus{
+  outline:none;border-color:var(--teal);background:#fff;
+  box-shadow:0 0 0 3px rgba(46,158,131,.15);
+}
+.field textarea{resize:vertical;min-height:140px}
+.form-status{margin-top:1rem;font-size:.92rem;font-weight:500;display:none}
+.form-status.ok{display:block;color:var(--teal-dark)}
+.form-status.err{display:block;color:#B4442E}
+.form-note{font-size:.8rem;color:var(--mist);margin-top:1rem}
+
+/* ====== Footer ====== */
+.footer{background:var(--navy-900);color:rgba(255,255,255,.6);padding:2.6rem 0}
+.footer-inner{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem;
+}
+.footer-brand{font-family:var(--serif);color:#fff;font-size:1.05rem}
+.footer-links{display:flex;flex-wrap:wrap;gap:1.5rem;list-style:none}
+.footer-links a{color:rgba(255,255,255,.65);font-size:.88rem;text-decoration:none !important}
+.footer-links a:hover{color:var(--sky)}
+.footer-copy{font-size:.82rem;width:100%;text-align:center;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.1)}
+
+/* ====== Responsive ====== */
+@media (max-width: 960px){
+  .hero-inner{grid-template-columns:1fr;gap:2.6rem}
+  .hero-side{max-width:440px}
+  .cv-grid,.pub-cols,.contact-grid{grid-template-columns:1fr;gap:2.6rem}
+  .research-lines{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 720px){
+  .section{padding:4rem 0}
+  .nav-toggle{display:flex}
+  .nav-links{
+    position:fixed;top:var(--nav-h);left:0;right:0;
+    flex-direction:column;gap:0;align-items:stretch;
+    background:var(--navy-900);border-bottom:1px solid rgba(255,255,255,.1);
+    max-height:0;overflow:hidden;transition:max-height .4s ease;
+  }
+  .nav-links.open{max-height:420px}
+  .nav-links li{border-top:1px solid rgba(255,255,255,.07)}
+  .nav-links a{display:block;padding:1rem 1.6rem}
+  .nav-links a::after{display:none}
+  .nav-cta{margin:1rem 1.6rem;text-align:center;border-radius:10px}
+  .research-lines,.services,.form-row{grid-template-columns:1fr}
+  .stats{gap:1.2rem 1rem}
+  .consult-banner{flex-direction:column;align-items:flex-start}
+  .hero-scroll{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">H. Charles-Leija<span>, PhD</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Inicio</a></li>
+      <li><a href="#curriculum">Curriculum</a></li>
+      <li><a href="#investigacion">Investigación</a></li>
+      <li><a href="#consultoria">Consultoría</a></li>
+      <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div>
+      <p class="hero-kicker fade-up d1"><span class="dot"></span>Doctor en Economía · SNI Nivel I</p>
+      <h1 class="fade-up d2">Humberto <em>Charles-Leija</em></h1>
+      <p class="hero-role fade-up d3">Investigador y Consultor en Bienestar Organizacional</p>
+      <p class="hero-desc fade-up d4">
+        Líder de Investigación en Organizaciones en el <strong>Instituto del Propósito y Bienestar Integral</strong>
+        (Universidad Tecmilenio) y catedrático de la Escuela de Negocios del Tecnológico de Monterrey.
+        Ayudo a las empresas a convertir el <strong>bienestar de sus colaboradores en una ventaja competitiva</strong>,
+        con investigación aplicada sobre trabajo significativo, liderazgo positivo y emprendimiento.
+      </p>
+      <div class="hero-actions fade-up d5">
+        <a href="#consultoria" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+          Consultoría para empresas
+        </a>
+        <a href="#investigacion" class="btn btn-ghost">Ver investigación</a>
+      </div>
+      <div class="hero-social fade-up d6">
+        <a href="https://scholar.google.com/citations?hl=es&user=TaD559QAAAAJ&view_op=list_works" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+          Google Scholar
+        </a>
+        <a href="https://www.linkedin.com/in/humberto-charles-leija-phd-56747626/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.researchgate.net/profile/Humberto_Charles-Leija" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          ResearchGate
+        </a>
+      </div>
+    </div>
+    <aside class="hero-side fade-up d6">
+      <figure class="hero-photo">
+        <img src="assets/humberto.jpg" alt="Humberto Charles-Leija en la conferencia de la International Society for Quality-of-Life Studies" onerror="this.closest('figure').style.display='none'">
+        <figcaption>Ponente · ISQOLS</figcaption>
+      </figure>
+      <div class="hero-card">
+      <h3>Trayectoria en cifras</h3>
+      <div class="stats">
+        <div><div class="stat-num">40<span>+</span></div><div class="stat-label">Artículos y capítulos publicados</div></div>
+        <div><div class="stat-num">600<span>+</span></div><div class="stat-label">Citas en publicaciones científicas</div></div>
+        <div><div class="stat-num">100<span>k+</span></div><div class="stat-label">Trabajadores medidos con Factor Wellbeing (2021–2026)</div></div>
+        <div><div class="stat-num">6</div><div class="stat-label">Países como ponente en congresos ISQOLS</div></div>
+      </div>
+      </div>
+    </aside>
+  </div>
+  <a href="#curriculum" class="hero-scroll">Descubrir</a>
+</section>
+
+<!-- ================= CURRICULUM ================= -->
+<section class="section" id="curriculum">
+  <div class="container">
+    <p class="eyebrow reveal">Curriculum</p>
+    <h2 class="section-title reveal">Ciencia rigurosa al servicio<br>de las organizaciones</h2>
+    <div class="cv-grid">
+      <div class="cv-text reveal">
+        <p>
+          Soy <strong>Doctor en Economía Regional</strong> por la Universidad Autónoma de Coahuila y miembro del
+          <strong>Sistema Nacional de Investigadores (SNI), Nivel I</strong>. Desde 2019 lidero la investigación en
+          organizaciones del Instituto del Propósito y Bienestar Integral de la Universidad Tecmilenio, y desde 2020
+          soy catedrático de la Escuela de Negocios del Tecnológico de Monterrey.
+        </p>
+        <p>
+          Durante seis años he sido <strong>asesor de directivos empresariales</strong> en la Maestría en Liderazgo
+          Positivo de la Universidad Tecmilenio, impactando a cientos de colaboradores. Además, como miembro del
+          programa <strong>Círculo Azul</strong> del Tec de Monterrey, asesoro a emprendedores para escalar sus proyectos.
+        </p>
+        <div class="cv-highlight">
+          “Fui miembro del Grupo Técnico Especializado en la Medición del Ingreso y Bienestar (GTMIB),
+          responsable del desarrollo de nuevos indicadores de bienestar e ingreso en México, en colaboración con INEGI.”
+        </div>
+        <p>
+          Soy miembro fundador de la <strong>Asociación Latinoamericana de Estudios del Florecimiento Humano (ALEFH)</strong>
+          y del comité editorial de la revista <em>Applied Research in Quality of Life</em>. Mi especialidad metodológica
+          incluye econometría, psicometría y desarrollo de escalas para medir el bienestar, con interés en la aplicación
+          de Big Data y Machine Learning a la economía y la psicología.
+        </p>
+        <div class="badges">
+          <span class="badge"><b>SNI</b> Nivel I</span>
+          <span class="badge">Comité editorial <b>ARQOL</b></span>
+          <span class="badge">Fundador <b>ALEFH</b></span>
+          <span class="badge">GTMIB · <b>INEGI</b></span>
+          <span class="badge">Círculo Azul · <b>Tec de Monterrey</b></span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="cv-block" style="margin-top:0">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Experiencia
+          </h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-date">2019 — Actual</div>
+              <div class="tl-role">Líder de Investigación en Organizaciones</div>
+              <div class="tl-org">Instituto del Propósito y Bienestar Integral · Universidad Tecmilenio</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">2020 — Actual</div>
+              <div class="tl-role">Catedrático, Escuela de Negocios</div>
+              <div class="tl-org">Tecnológico de Monterrey</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">2020 — Actual</div>
+              <div class="tl-role">Asesor de Directivos · Maestría en Liderazgo Positivo</div>
+              <div class="tl-org">Universidad Tecmilenio</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">2016 — 2019</div>
+              <div class="tl-role">Investigador</div>
+              <div class="tl-org">Instituto Tecnológico de Saltillo</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">2017</div>
+              <div class="tl-role">Profesor Visitante</div>
+              <div class="tl-org">Institut d'Anàlisi Econòmica · Universitat Autònoma de Barcelona</div>
+            </div>
+          </div>
+        </div>
+        <div class="cv-block">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+            Formación académica
+          </h3>
+          <div class="edu-item">
+            <div class="edu-year">2014–2018</div>
+            <div class="edu-body"><strong>Doctorado en Economía Regional</strong><span>Universidad Autónoma de Coahuila</span></div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-year">2008–2010</div>
+            <div class="edu-body"><strong>Maestría en Economía Regional</strong><span>Universidad Autónoma de Coahuila</span></div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-year">2003–2007</div>
+            <div class="edu-body"><strong>Ingeniería Industrial y de Sistemas</strong><span>Universidad Autónoma de Coahuila</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section class="section" id="investigacion">
+  <div class="container">
+    <p class="eyebrow reveal">Investigación Científica</p>
+    <h2 class="section-title reveal">Líneas de investigación y publicaciones</h2>
+    <p class="section-lead reveal">
+      Alrededor de 40 artículos y capítulos publicados, con más de 600 citas en la literatura científica.
+      Ponente en congresos de la International Society for Quality-of-Life Studies (ISQOLS) en Estados Unidos,
+      Corea del Sur, Austria, Países Bajos, Luxemburgo y Argentina.
+    </p>
+
+    <div class="research-lines">
+      <div class="line-card reveal">
+        <div class="line-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg>
+        </div>
+        <h3>Bienestar Organizacional</h3>
+        <p>Medición y promoción del bienestar en el trabajo: modelo BEAT, validación de instrumentos (IWH-BEAT, PERMA-Profiler, Healthy Mind Index) y su relación con la productividad y la rotación laboral.</p>
+      </div>
+      <div class="line-card reveal">
+        <div class="line-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Trabajo Significativo</h3>
+        <p>Propósito de vida, felicidad laboral e intenciones de rotación: evidencia empírica sobre cómo el sentido del trabajo transforma el desempeño y la permanencia de los colaboradores.</p>
+      </div>
+      <div class="line-card reveal">
+        <div class="line-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        </div>
+        <h3>Emprendimiento</h3>
+        <p>Florecimiento humano como habilitador de la intención emprendedora en Latinoamérica, satisfacción laboral y calidad de vida de los emprendedores en México.</p>
+      </div>
+    </div>
+
+    <div class="pub-cols">
+      <div class="pub-list reveal">
+        <h3>Publicaciones seleccionadas</h3>
+        <div class="pub-item">
+          <div class="pub-title">Meaningful Work, Happiness at Work, and Turnover Intentions</div>
+          <div class="pub-meta"><em>Int. Journal of Environmental Research and Public Health</em> · 2023</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">The IWH-BEAT Questionnaire Validation</div>
+          <div class="pub-meta"><em>Int. Journal of Environmental Research and Public Health</em> · 2022</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">PERMA-Profiler for the Evaluation of Well-Being: Adaptation and Validation in the Mexican Educational Context</div>
+          <div class="pub-meta"><em>Applied Research in Quality of Life</em> · 2023</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">Human Flourishing: An Enabler of Entrepreneurial Intention in Latin America</div>
+          <div class="pub-meta"><em>European Business Review</em> · 2021</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">Violence in the Household and Happiness in Mexico</div>
+          <div class="pub-meta"><em>Australian Economic Review</em> · 2019</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">Validation of Healthy Mind Index, Spanish Version of Core Dimensions of Wellbeing</div>
+          <div class="pub-meta">Con R. Davidson (Center for Healthy Minds) · 2025</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">Job Satisfaction of Entrepreneurs in Mexico: Challenges and Benefits</div>
+          <div class="pub-meta"><em>Contaduría y Administración</em> · 2021</div>
+        </div>
+        <a class="scholar-link" href="https://scholar.google.com/citations?hl=es&user=TaD559QAAAAJ&view_op=list_works" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3z"/></svg>
+          Ver todas las publicaciones en Google Scholar →
+        </a>
+      </div>
+      <div class="pub-side reveal">
+        <h3>Libros</h3>
+        <div class="book-card">
+          <div class="book-spine"></div>
+          <div>
+            <h4>Factor Wellbeing: El bienestar como ventaja competitiva</h4>
+            <p>LID Editorial · 2023 · Coautor. Marco de referencia para la medición del bienestar de más de 100 mil trabajadores en México.</p>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-spine"></div>
+          <div>
+            <h4>Ambientes Positivos: Confianza, aprecio y apoyo para una organización diversa e incluyente</h4>
+            <p>LID Editorial · 2025 · Coautor.</p>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-spine"></div>
+          <div>
+            <h4>Four Pillars of Wellbeing in Organizations</h4>
+            <p>Capítulo en <em>The World Book of Happiness</em> · Firefly Books · 2023.</p>
+          </div>
+        </div>
+        <div class="note">
+          <strong>Divulgación científica:</strong> participación en podcasts, radio y televisión difundiendo
+          investigación sobre bienestar, y ponencias internacionales ante la International Society for
+          Quality-of-Life Studies (ISQOLS) y la International Positive Psychology Association (IPPA).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONSULTING ================= -->
+<section class="section" id="consultoria">
+  <div class="container">
+    <p class="eyebrow reveal">Consultoría</p>
+    <h2 class="section-title reveal">Bienestar organizacional<br>como ventaja competitiva</h2>
+    <p class="section-lead reveal">
+      Acompaño a empresas y equipos directivos en el diseño, medición y mejora del bienestar de sus
+      colaboradores, con metodologías validadas científicamente y experiencia midiendo el bienestar de
+      más de <strong style="color:#fff">100,000 trabajadores en México</strong> a través del proyecto Factor Wellbeing.
+    </p>
+    <div class="services">
+      <div class="service reveal">
+        <span class="service-num">— 01</span>
+        <h3>Diagnóstico y medición del bienestar</h3>
+        <p>Aplicación de instrumentos psicométricos validados (BEAT, PERMA, Healthy Mind Index) para diagnosticar el estado real del bienestar en tu organización, con analítica avanzada y benchmarks nacionales.</p>
+      </div>
+      <div class="service reveal">
+        <span class="service-num">— 02</span>
+        <h3>Estrategias de bienestar y trabajo significativo</h3>
+        <p>Diseño de intervenciones basadas en evidencia para fortalecer el propósito, la confianza y el aprecio en los equipos, reduciendo la rotación y elevando el compromiso.</p>
+      </div>
+      <div class="service reveal">
+        <span class="service-num">— 03</span>
+        <h3>Asesoría a directivos y liderazgo positivo</h3>
+        <p>Seis años asesorando a directivos empresariales en la Maestría en Liderazgo Positivo: desarrollo de líderes que generan ambientes de alto desempeño y florecimiento humano.</p>
+      </div>
+      <div class="service reveal">
+        <span class="service-num">— 04</span>
+        <h3>Conferencias y formación ejecutiva</h3>
+        <p>Ponencias, talleres y programas in-company sobre economía de la felicidad, retorno de inversión en bienestar y organizaciones más productivas.</p>
+      </div>
+    </div>
+    <div class="consult-banner reveal">
+      <p>“Las organizaciones que miden y gestionan el bienestar no solo retienen mejor a su talento: son más productivas.”</p>
+      <a href="#contacto" class="btn btn-primary">Agendar una conversación
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contacto">
+  <div class="container">
+    <p class="eyebrow reveal">Contacto</p>
+    <h2 class="section-title reveal">Hablemos de tu organización</h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>¿Interesado en colaborar?</h3>
+        <p>
+          Ya sea para un proyecto de consultoría, una colaboración académica o una conferencia,
+          escríbeme y con gusto conversamos.
+        </p>
+        <a class="contact-item" href="mailto:humbertocharles@yahoo.com">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </div>
+          <div class="ci-body"><strong>Email</strong><span>humbertocharles@yahoo.com</span></div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/humberto-charles-leija-phd-56747626/" target="_blank" rel="noopener">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </div>
+          <div class="ci-body"><strong>LinkedIn</strong><span>Humberto Charles-Leija, PhD</span></div>
+        </a>
+        <a class="contact-item" href="https://scholar.google.com/citations?hl=es&user=TaD559QAAAAJ&view_op=list_works" target="_blank" rel="noopener">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9z"/></svg>
+          </div>
+          <div class="ci-body"><strong>Google Scholar</strong><span>Perfil académico y publicaciones</span></div>
+        </a>
+      </div>
+      <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/humbertocharles@yahoo.com" method="POST">
+        <input type="hidden" name="_subject" value="📩 Nuevo mensaje desde tu página web">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <div class="field">
+            <label for="f-name">Nombre</label>
+            <input type="text" id="f-name" name="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" placeholder="tu@empresa.com" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-subject">Asunto</label>
+          <input type="text" id="f-subject" name="subject" placeholder="Consultoría, conferencia, colaboración…">
+        </div>
+        <div class="field">
+          <label for="f-message">Mensaje</label>
+          <textarea id="f-message" name="message" placeholder="Cuéntame sobre tu organización y lo que buscas…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center">
+          Enviar mensaje
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        </button>
+        <p class="form-status" id="formStatus"></p>
+        <p class="form-note">Tu mensaje llega directamente a mi correo. Tus datos no se comparten con terceros.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">Humberto Charles-Leija, PhD</div>
+    <ul class="footer-links">
+      <li><a href="#curriculum">Curriculum</a></li>
+      <li><a href="#investigacion">Investigación</a></li>
+      <li><a href="#consultoria">Consultoría</a></li>
+      <li><a href="https://scholar.google.com/citations?hl=es&user=TaD559QAAAAJ&view_op=list_works" target="_blank" rel="noopener">Google Scholar</a></li>
+      <li><a href="https://www.linkedin.com/in/humberto-charles-leija-phd-56747626/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+    <p class="footer-copy">© <span id="year"></span> Humberto Charles-Leija. Todos los derechos reservados. · Investigación y consultoría en bienestar organizacional.</p>
+  </div>
+</footer>
+
+<script>
+// Año dinámico
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Menú móvil
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', open);
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  navToggle.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}));
+
+// Reveal on scroll
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Enlace activo según sección visible
+const sections = document.querySelectorAll('section[id]');
+const menuLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      menuLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => spy.observe(s));
+
+// Formulario → Formspree (AJAX, sin recargar la página)
+const form = document.getElementById('contactForm');
+const statusEl = document.getElementById('formStatus');
+const submitBtn = document.getElementById('submitBtn');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  statusEl.className = 'form-status';
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '.6';
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/humbertocharles@yahoo.com', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      statusEl.textContent = '✓ Mensaje enviado correctamente. Te responderé pronto.';
+      statusEl.classList.add('ok');
+      form.reset();
+    } else {
+      throw new Error('server');
+    }
+  } catch (err) {
+    statusEl.textContent = '✗ Hubo un problema al enviar. Escríbeme directamente a humbertocharles@yahoo.com';
+    statusEl.classList.add('err');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+  }
+});
+</script>
+</body>
+</html>
