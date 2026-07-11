@@ -296,12 +296,24 @@ a:hover{text-decoration:underline}
   color:#fff;border-radius:var(--radius);padding:1.4rem;margin-bottom:1rem;
   box-shadow:var(--shadow-md);
 }
+.book-card-link{
+  text-decoration:none !important;border:1px solid transparent;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.book-card-link:hover{
+  transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:rgba(143,193,227,.5);
+}
 .book-spine{
   width:6px;border-radius:3px;flex-shrink:0;
   background:linear-gradient(var(--teal), var(--sky));
 }
 .book-card h4{color:#fff;font-size:1.05rem;margin-bottom:.3rem}
 .book-card p{color:rgba(255,255,255,.75);font-size:.86rem}
+.book-cta{
+  display:inline-flex;align-items:center;gap:.35rem;margin-top:.7rem;
+  font-size:.82rem;font-weight:600;color:var(--sky);
+}
+.book-cta svg{width:14px;height:14px}
 .pub-side .note{
   background:var(--sky-soft);border:1px solid #D5E7F4;border-radius:var(--radius);
   padding:1.2rem 1.4rem;font-size:.92rem;color:var(--navy-700);margin-top:1.4rem;
@@ -661,20 +673,26 @@ a:hover{text-decoration:underline}
       </div>
       <div class="pub-side reveal">
         <h3>Libros</h3>
-        <div class="book-card">
+        <a class="book-card book-card-link" href="https://www.amazon.com.mx/Factor-Wellbeing-bienestar-ventaja-competitiva-ebook/dp/B0BWGLD59M/ref=sr_1_2?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-2" target="_blank" rel="noopener">
           <div class="book-spine"></div>
           <div>
             <h4>Factor Wellbeing: El bienestar como ventaja competitiva</h4>
             <p>LID Editorial · 2023 · Coautor. Marco de referencia para la medición del bienestar de más de 100 mil trabajadores en México.</p>
+            <span class="book-cta">Ver en Amazon
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
           </div>
-        </div>
-        <div class="book-card">
+        </a>
+        <a class="book-card book-card-link" href="https://www.amazon.com.mx/Ambientes-positivos-confianza-organizaci%C3%B3n-incluyente-ebook/dp/B0FRVH58WG/ref=sr_1_1?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1" target="_blank" rel="noopener">
           <div class="book-spine"></div>
           <div>
             <h4>Ambientes Positivos: Confianza, aprecio y apoyo para una organización diversa e incluyente</h4>
             <p>LID Editorial · 2025 · Coautor.</p>
+            <span class="book-cta">Ver en Amazon
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </span>
           </div>
-        </div>
+        </a>
         <div class="book-card">
           <div class="book-spine"></div>
           <div>
@@ -745,11 +763,11 @@ a:hover{text-decoration:underline}
           Ya sea para un proyecto de consultoría, una colaboración académica o una conferencia,
           escríbeme y con gusto conversamos.
         </p>
-        <a class="contact-item" href="mailto:humbertocharles@yahoo.com">
+        <a class="contact-item" href="#f-name">
           <div class="ci-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
           </div>
-          <div class="ci-body"><strong>Email</strong><span>humbertocharles@yahoo.com</span></div>
+          <div class="ci-body"><strong>Escríbeme</strong><span>Completa el formulario de contacto</span></div>
         </a>
         <a class="contact-item" href="https://www.linkedin.com/in/humberto-charles-leija-phd-56747626/" target="_blank" rel="noopener">
           <div class="ci-icon">
@@ -872,7 +890,7 @@ form.addEventListener('submit', async (e) => {
       throw new Error('server');
     }
   } catch (err) {
-    statusEl.textContent = '✗ Hubo un problema al enviar. Escríbeme directamente a humbertocharles@yahoo.com';
+    statusEl.textContent = '✗ Hubo un problema al enviar. Por favor, inténtalo de nuevo en unos minutos.';
     statusEl.classList.add('err');
   } finally {
     submitBtn.disabled = false;
