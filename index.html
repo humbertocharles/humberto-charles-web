@@ -284,13 +284,39 @@ a:hover{text-decoration:underline}
 .pub-cols{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:start}
 .pub-list h3, .pub-side h3{font-size:1.3rem;margin-bottom:1.4rem}
 .pub-item{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
   padding:1.05rem 1.2rem;border-radius:12px;border:1px solid transparent;
   transition:background .25s ease, border-color .25s ease;margin-bottom:.35rem;
 }
 .pub-item:hover{background:var(--paper);border-color:var(--line)}
+.pub-text{min-width:0;flex:1}
 .pub-title{font-family:var(--serif);font-weight:600;color:var(--navy-800);font-size:1rem;line-height:1.4}
 .pub-meta{font-size:.85rem;color:var(--slate);margin-top:.25rem}
 .pub-meta em{color:var(--teal-dark);font-style:normal;font-weight:600}
+.pub-download{
+  flex-shrink:0;display:inline-flex;align-items:center;gap:.35rem;
+  padding:.42rem .8rem;border-radius:999px;border:1.5px solid var(--line);
+  font-size:.78rem;font-weight:600;color:var(--teal-dark);background:var(--white);
+  transition:background .2s ease, border-color .2s ease, transform .2s ease;
+  text-decoration:none !important;white-space:nowrap;
+}
+.pub-download:hover{background:var(--teal-soft);border-color:var(--teal);transform:translateY(-1px)}
+.pub-download svg{width:14px;height:14px;flex-shrink:0}
+.pub-archive{margin-top:1.8rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.pub-archive summary{
+  cursor:pointer;font-weight:600;color:var(--navy-800);font-size:.98rem;
+  list-style:none;display:flex;align-items:center;gap:.7rem;padding:.3rem 0;
+  font-family:var(--serif);
+}
+.pub-archive summary::-webkit-details-marker{display:none}
+.pub-archive-toggle{
+  width:26px;height:26px;border-radius:50%;background:var(--teal-soft);color:var(--teal-dark);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s ease;
+}
+.pub-archive[open] .pub-archive-toggle{transform:rotate(45deg)}
+.pub-archive-list{margin-top:1rem;max-height:560px;overflow-y:auto;padding-right:.4rem}
+.pub-archive-list .pub-item{padding:.85rem 1rem}
+.pub-archive-list .pub-title{font-size:.92rem}
 .book-card{
   display:flex;gap:1.1rem;background:linear-gradient(135deg, var(--navy-800), var(--navy-600));
   color:#fff;border-radius:var(--radius);padding:1.4rem;margin-bottom:1rem;
@@ -639,33 +665,166 @@ a:hover{text-decoration:underline}
       <div class="pub-list reveal">
         <h3>Publicaciones seleccionadas</h3>
         <div class="pub-item">
-          <div class="pub-title">Meaningful Work, Happiness at Work, and Turnover Intentions</div>
-          <div class="pub-meta"><em>Int. Journal of Environmental Research and Public Health</em> · 2023</div>
+          <div class="pub-text">
+            <div class="pub-title">Meaningful Work, Happiness at Work, and Turnover Intentions</div>
+            <div class="pub-meta"><em>Int. Journal of Environmental Research and Public Health</em> · 2023</div>
+          </div>
+          <a class="pub-download" href="publicaciones/charles%20et%20al%2023%20meaningful%20work.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF: Meaningful Work, Happiness at Work, and Turnover Intentions">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF
+          </a>
         </div>
         <div class="pub-item">
-          <div class="pub-title">The IWH-BEAT Questionnaire Validation</div>
-          <div class="pub-meta"><em>Int. Journal of Environmental Research and Public Health</em> · 2022</div>
+          <div class="pub-text">
+            <div class="pub-title">The IWH-BEAT Questionnaire Validation</div>
+            <div class="pub-meta"><em>Int. Journal of Environmental Research and Public Health</em> · 2022</div>
+          </div>
+          <a class="pub-download" href="publicaciones/Toledo%20charles%20et%20al%2022%20-%20The%20IWH-BEAT%20Questionnaire%20Validation.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF: The IWH-BEAT Questionnaire Validation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF
+          </a>
         </div>
         <div class="pub-item">
-          <div class="pub-title">PERMA-Profiler for the Evaluation of Well-Being: Adaptation and Validation in the Mexican Educational Context</div>
-          <div class="pub-meta"><em>Applied Research in Quality of Life</em> · 2023</div>
+          <div class="pub-text">
+            <div class="pub-title">PERMA-Profiler for the Evaluation of Well-Being: Adaptation and Validation in the Mexican Educational Context</div>
+            <div class="pub-meta"><em>Applied Research in Quality of Life</em> · 2023</div>
+          </div>
+          <a class="pub-download" href="publicaciones/Chaves%20Ballesteros%20Charles%2023%20-%20Perma%20profiler%20students.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF: PERMA-Profiler for the Evaluation of Well-Being">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF
+          </a>
         </div>
         <div class="pub-item">
-          <div class="pub-title">Human Flourishing: An Enabler of Entrepreneurial Intention in Latin America</div>
-          <div class="pub-meta"><em>European Business Review</em> · 2021</div>
+          <div class="pub-text">
+            <div class="pub-title">Human Flourishing: An Enabler of Entrepreneurial Intention in Latin America</div>
+            <div class="pub-meta"><em>European Business Review</em> · 2021</div>
+          </div>
+          <a class="pub-download" href="publicaciones/Silveyra%20Charles%20et%20al%2021%20-%20Human%20Flourishing%20modificado.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF: Human Flourishing">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF
+          </a>
         </div>
         <div class="pub-item">
-          <div class="pub-title">Violence in the Household and Happiness in Mexico</div>
-          <div class="pub-meta"><em>Australian Economic Review</em> · 2019</div>
+          <div class="pub-text">
+            <div class="pub-title">Violence in the Household and Happiness in Mexico</div>
+            <div class="pub-meta"><em>Australian Economic Review</em> · 2019</div>
+          </div>
+          <a class="pub-download" href="publicaciones/charles-leija-aboites-llamas-2018-violence-%20ok.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF: Violence in the Household and Happiness in Mexico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF
+          </a>
         </div>
         <div class="pub-item">
-          <div class="pub-title">Validation of Healthy Mind Index, Spanish Version of Core Dimensions of Wellbeing</div>
-          <div class="pub-meta">Con R. Davidson (Center for Healthy Minds) · 2025</div>
+          <div class="pub-text">
+            <div class="pub-title">Validation of Healthy Mind Index, Spanish Version of Core Dimensions of Wellbeing</div>
+            <div class="pub-meta">Con R. Davidson (Center for Healthy Minds) · 2025</div>
+          </div>
+          <a class="pub-download" href="publicaciones/charles%20davidson%20ballesteros%2025%20HMI%20sv.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF: Validation of Healthy Mind Index">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF
+          </a>
         </div>
         <div class="pub-item">
-          <div class="pub-title">Job Satisfaction of Entrepreneurs in Mexico: Challenges and Benefits</div>
-          <div class="pub-meta"><em>Contaduría y Administración</em> · 2021</div>
+          <div class="pub-text">
+            <div class="pub-title">Job Satisfaction of Entrepreneurs in Mexico: Challenges and Benefits</div>
+            <div class="pub-meta"><em>Contaduría y Administración</em> · 2021</div>
+          </div>
+          <a class="pub-download" href="publicaciones/charles%20sanchez%2021%20y%2024%20%20job%20satisfaction%20entrepreneurs.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF: Job Satisfaction of Entrepreneurs in Mexico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF
+          </a>
         </div>
+
+        <details class="pub-archive">
+          <summary><span class="pub-archive-toggle">+</span> Ver todas las publicaciones descargables (28)</summary>
+          <div class="pub-archive-list">
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">A Review of Contributions to the Study of Utility and Happiness in the Economy</div><div class="pub-meta"><em>Análisis Económico</em> · 2018</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20-%20Contributions%20to%20happiness.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">A Comparative Study of Wellbeing in Students during the COVID-19 Pandemic: Tecmilenio Case</div><div class="pub-meta">Routledge (capítulo de libro) · 2021</div></div>
+              <a class="pub-download" href="publicaciones/2.1%20Ballesteros%20y%20Charles-21%20Wellbeing%20in%20students.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Entrepreneurs in Mexico, an Approach to Their Quality of Life</div><div class="pub-meta"><em>Dimensión Empresarial</em> · 2019</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20-Entrepreneurs%20quality%20of%20life.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Formulación y Evaluación de Proyectos, una Reflexión para las PYMES Agroindustriales de México</div><div class="pub-meta">2020</div></div>
+              <a class="pub-download" href="publicaciones/Charles%2020%20-%20plan%20de%20negocios.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Apps for Wellbeing in Tecmilenio University</div><div class="pub-meta">IFE Conference · 2023</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20Toledo%20Castro%2023%20-%20Apps%20bienestar%20tecmilenio.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Social Networks Analysis to Avoid Dropout and Bullying</div><div class="pub-meta">IFE Conference · 2023</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20Toledo%20Castro%2023%20-%20Redes%20sociales%20desempe%C3%B1o%20escolar.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Social Networks, Academic Success Factor?</div><div class="pub-meta">IFE Conference · 2024</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20Toledo%20Castro%2024%20redes%20sociales%20exito%20academico.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Búsqueda de Empleo, Capital Social y Salarios en México</div><div class="pub-meta"><em>Revista de Economía del Rosario</em> · 2021</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20Torres%20Casto%2021%20-%20B%C3%BAsqueda%20de%20empleo%2C%20capital%20social%20y%20salarios%20en%20M%C3%A9xico.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Comparación del Bienestar Socioemocional de Estudiantes de Preparatoria antes y durante el COVID-19</div><div class="pub-meta">2022</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20et%20al%2022%20Bienestar%20emocional%20tecmilenio.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Character Strengths Use and Human Flourishing in Adolescence and Youth</div><div class="pub-meta">Springer (capítulo de libro) · 2025</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20et%20al%2025%20character%20strengths%20human%20flourishing.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Positive Side Effects of Having a Life Purpose: The Case of Graduates of Tecmilenio University</div><div class="pub-meta">Congreso Internacional de Innovación Educativa · 2020</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20etal%2020%20-%20Proposito%20egresados%20tecmilenio.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">English Proficiency and Salary in Mexico</div><div class="pub-meta"><em>Análisis Económico</em> · 2022</div></div>
+              <a class="pub-download" href="publicaciones/Charles%20y%20Torres%2022%20-%20Dominio%20del%20ingl%C3%A9s%20y%20salario%20en%20M%C3%A9xico.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Fortalezas de Carácter en Universidad Tecmilenio</div><div class="pub-meta">2021</div></div>
+              <a class="pub-download" href="publicaciones/Charles-Leija%20y%20Toledo%2021%20-%20Fortalezas%20de%20car%C3%A1cter%20en%20universidad%20tecmilenio.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Análisis Exploratorio de Datos de Bienestar Subjetivo en México, 2013 a 2020</div><div class="pub-meta"><em>Panorama Económico</em> · 2022</div></div>
+              <a class="pub-download" href="publicaciones/Charles-leija-2022-Analisis-exploratorio-de-datos-de-bienestar.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Chile, Economic Miracle, but… What's About Well-Being?</div><div class="pub-meta"><em>Perfiles Latinoamericanos</em> · 2022</div></div>
+              <a class="pub-download" href="publicaciones/Rojas%20y%20%20Charles%2022%20-%20Chile%2C%20milagro.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Character Strengths: A Roadmap to Students' Life Satisfaction</div><div class="pub-meta">IFE Conference · 2023</div></div>
+              <a class="pub-download" href="publicaciones/Toledo%20Charles%20Castro%2023%20-%20Fortalezas%20de%20car%C3%A1cter%20y%20satisfaccion%20con%20la%20vida.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">COVID-19 and Spatial Analysis in Mexico</div><div class="pub-meta"><em>Revista de Estudios Regionales</em> · 2024</div></div>
+              <a class="pub-download" href="publicaciones/charles%2024%20esda%20covid%20mexico.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Impacto de la Desigualdad en la Satisfacción con la Vida de los Coahuilenses</div><div class="pub-meta">Capítulo de libro · 2018</div></div>
+              <a class="pub-download" href="publicaciones/charles%20et%20al%2018%20desigualdad%20coahuilenses.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">BEAT, the Four Pillars of Wellbeing in Organizations</div><div class="pub-meta"><em>Cuadernos de Administración</em> · 2022</div></div>
+              <a class="pub-download" href="publicaciones/charles%20et%20al%2023%20beat%20cuadernos.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">Factores que Promueven la Rotación Laboral en México: un Análisis Regional Econométrico</div><div class="pub-meta">UNAM, Instituto de Investigaciones Económicas · 2025</div></div>
+              <a class="pub-download" href="publicaciones/manriquez%20charles%20lara%2026%20rotacion%20laboral%20mx%20regiones.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+            <div class="pub-item">
+              <div class="pub-text"><div class="pub-title">What Matters is the Emotion: Natural Leadership to Promote Well-Being in School</div><div class="pub-meta">IEEE · IFE Conference · 2025</div></div>
+              <a class="pub-download" href="publicaciones/charles%20toLedo%20castro%2025%20IFE%20emotion%20matters.pdf" download target="_blank" rel="noopener" aria-label="Descargar PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</a>
+            </div>
+          </div>
+        </details>
+
         <a class="scholar-link" href="https://scholar.google.com/citations?hl=es&user=TaD559QAAAAJ&view_op=list_works" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3z"/></svg>
           Ver todas las publicaciones en Google Scholar →
